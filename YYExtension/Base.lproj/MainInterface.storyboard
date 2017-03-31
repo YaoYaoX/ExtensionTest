@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Syx-5N-aAl">
+                                <rect key="frame" x="20" y="7" width="40" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="av3-Cf-Bae"/>
+                                    <constraint firstAttribute="height" constant="22" id="h2W-Xh-9cL"/>
+                                </constraints>
+                                <state key="normal" title="Open"/>
+                                <connections>
+                                    <action selector="openContainingApp:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="xND-2F-VSM"/>
+                                </connections>
+                            </button>
+                            <slider hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JbX-EX-wbu">
+                                <rect key="frame" x="68" y="3" width="244" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="TQO-wJ-za6"/>
+                                </constraints>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7Y-Ea-8FR" userLabel="mess">
+                                <rect key="frame" x="0.0" y="43" width="320" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="QV0-jm-vF8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.8922208626" green="0.089021784160000006" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLY-1Q-Pf9">
+                                <rect key="frame" x="145" y="3" width="45" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4Au-2A-xjD"/>
+                                    <constraint firstAttribute="width" constant="45" id="tHa-9D-YV3"/>
+                                </constraints>
+                                <state key="normal" title="write"/>
+                                <connections>
+                                    <action selector="writeGroupDataByNsFileManager" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="hhm-n9-0wI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xd-n0-3CI">
+                                <rect key="frame" x="266" y="3" width="34" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="34" id="G9x-h9-HuC"/>
+                                    <constraint firstAttribute="height" constant="30" id="VBJ-ak-ABS"/>
+                                </constraints>
+                                <state key="normal" title="read"/>
+                                <connections>
+                                    <action selector="readGroupDataByNsFileManager" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="B10-aV-8ra"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="l7Y-Ea-8FR" firstAttribute="top" secondItem="JbX-EX-wbu" secondAttribute="bottom" constant="10" id="1GX-py-M6J"/>
+                            <constraint firstAttribute="trailing" secondItem="l7Y-Ea-8FR" secondAttribute="trailing" id="6qd-1l-v1A"/>
+                            <constraint firstItem="l7Y-Ea-8FR" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="Fwc-QV-z7I"/>
+                            <constraint firstAttribute="trailing" secondItem="6xd-n0-3CI" secondAttribute="trailing" constant="20" id="I78-EQ-xZS"/>
+                            <constraint firstAttribute="trailing" secondItem="JbX-EX-wbu" secondAttribute="trailing" constant="10" id="Igv-eq-eaG"/>
+                            <constraint firstItem="6xd-n0-3CI" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="KkQ-xz-WYF"/>
+                            <constraint firstItem="Syx-5N-aAl" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="20" id="che-On-7Ao"/>
+                            <constraint firstItem="Syx-5N-aAl" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="dMg-2J-bpr"/>
+                            <constraint firstItem="JbX-EX-wbu" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="nmA-4h-RWZ"/>
+                            <constraint firstItem="JbX-EX-wbu" firstAttribute="leading" secondItem="Syx-5N-aAl" secondAttribute="trailing" constant="10" id="tT6-sF-7EQ"/>
+                            <constraint firstItem="yLY-1Q-Pf9" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="vth-Vm-Vb8"/>
+                            <constraint firstItem="yLY-1Q-Pf9" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" constant="7.5" id="xvx-b2-MH2"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="37"/>
+                    <connections>
+                        <outlet property="msgLbl" destination="l7Y-Ea-8FR" id="Icn-hd-oks"/>
+                        <outlet property="slider" destination="JbX-EX-wbu" id="AAJ-yK-rmi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="273.60000000000002" y="9.4452773613193415"/>
+        </scene>
+    </scenes>
+</document>
